@@ -121,7 +121,12 @@ with st.sidebar:
 ###########################
 ###        Main         ###
 ###########################
-st.image("combined_logo.jpg")
+# Create three columns with a 1:2:1 ratio
+# The middle column (2) will hold the logo
+col1, col2, col3 = st.columns([1, 2, 1])
+
+with col2:
+    st.image("combined_logo.jpg", use_container_width=True)
 st.title("ThunderbAIrd Assistant")
 
 if not st.session_state["authenticated"]:
