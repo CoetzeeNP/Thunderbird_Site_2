@@ -127,12 +127,12 @@ col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
     st.image("combined_logo.jpg", use_container_width=True)
-st.title("ThunderbAIrd Assistant")
+st.title("AI for Sci")
 
 if not st.session_state["authenticated"]:
     st.warning("Please login via the sidebar.")
-    st.info("Welcome to the ThunderbAIrd Business Planner Streamlit App!\n You are welcome to ask all your business and business planning related questions here. \n\n"
-            "All your prompts and generated responses are recorded while using the app. You will be asked for feedback after each questions. If you click the \"I need more help\" button, the large language model will try and be more detailed in its explanation to try assist you learn!"
+    st.info("Welcome to the AI for Sci Streamlit App!\n You are welcome to ask all your science related questions here. \n\n"
+            "All your prompts and generated responses are recorded while using the app, please do not submit any personal information into the app. You will be asked for feedback after each questions. If you click the \"I need more help\" button, the large language model will try and be more detailed in its explanation to try assist you learn!"
             "\n\nPlease remember that large language models are not perfect and are prone to hallucinations or representing false information as fact quite convincingly.")
     st.stop()
 
@@ -188,7 +188,7 @@ if st.session_state.get("trigger_clarification"):
     generate_ai_response("CLARIFICATION_RESPONSE")
 
 # 4. Chat Input
-input_msg = "Please provide feedback..." if st.session_state["feedback_pending"] else "Ask your business related question here"
+input_msg = "Please provide feedback..." if st.session_state["feedback_pending"] else "Ask your science related question here"
 if prompt := st.chat_input(input_msg, disabled=st.session_state["feedback_pending"]):
     st.session_state["messages"].append({"role": "user", "content": prompt})
 
