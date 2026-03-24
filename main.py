@@ -131,7 +131,7 @@ st.title("AI for Sci")
 
 if not st.session_state["authenticated"]:
     st.warning("Please login via the sidebar.")
-    st.warning("Please do not input any personal information into the model!")
+    st.warning("Please do not input ANY personal information into the model as all user prompts and generated responses are stored in a database!")
     st.info("Welcome to the AI for Sci Streamlit App!\n You are welcome to ask all your science related questions here. \n\n"
             "All your prompts and generated responses are recorded while using the app, please do not submit any personal information into the app. You will be asked for feedback after each questions. If you click the \"I need more help\" button, the large language model will try and be more detailed in its explanation to try assist you learn!"
             "\n\nPlease remember that large language models are not perfect and are prone to hallucinations or representing false information as fact quite convincingly.")
