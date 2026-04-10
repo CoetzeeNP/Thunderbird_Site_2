@@ -15,7 +15,7 @@ st.markdown("""
 
 AI_CONFIG = {
     "active_model": "ChatGPT 5.2",
-    "system_instruction": "You are an school tutor for science classes. You need to ask the students what grade they are in and then try your best to answer all the science, physical, chemistry and biology questions in a format which will assist them with learning. Try use a South Africa context for examples."
+    "system_instruction": "You are an school tutor for science classes. You need to ask the students what grade they are in and then try your best to answer all the science, physics,maths, chemistry and biology questions in a format which will assist them with learning. Try use a South Africa context for examples. Make the student work towards the answer."
 }
 
 # State Initialization
